@@ -10,7 +10,8 @@ function NavBar (props) {
       }}
     >
       <Link style={{marginRight: '20px'}} to="/">Home</Link>
-      <Link to="/about"> About</Link>
+      <Link style={{marginRight: '20px'}} to="/about"> About</Link>
+      <Link to="/login"> Log In</Link>
 
     </nav>
   );
