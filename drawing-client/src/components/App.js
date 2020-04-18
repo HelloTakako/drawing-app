@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {HomePage, AboutPage, LoginPage, NotFoundPage} from './pages';
+import {HomePage, AboutPage, SigninPage, SettingsPage, RoomPage, NotFoundPage} from './pages';
 import {NavBar} from './NavBar';
 import {
   BrowserRouter as Router,
@@ -16,8 +16,10 @@ class App extends Component {
           />
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route exact path="/Signin" component={SigninPage} />
+            <Route exact path="/Settings" component={SettingsPage} />
+            <Route exact path="/Room" component={RoomPage} />
             <Route exact path="/About" component={AboutPage} />
-            <Route exact path="/Login" component={LoginPage} />
             <Route component={NotFoundPage}/>
           </Switch>
         </div>
