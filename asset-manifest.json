@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/drawing-app/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/drawing-app/static/js/main.5d8b29bd.chunk.js",
+    "main.js.map": "/drawing-app/static/js/main.5d8b29bd.chunk.js.map",
+    "runtime-main.js": "/drawing-app/static/js/runtime-main.bdeb09b3.js",
+    "runtime-main.js.map": "/drawing-app/static/js/runtime-main.bdeb09b3.js.map",
+    "static/js/2.d65a8d7f.chunk.js": "/drawing-app/static/js/2.d65a8d7f.chunk.js",
+    "static/js/2.d65a8d7f.chunk.js.map": "/drawing-app/static/js/2.d65a8d7f.chunk.js.map",
+    "index.html": "/drawing-app/index.html",
+    "precache-manifest.1048fe2ecc1d3a0bba5bf7ef69242d17.js": "/drawing-app/precache-manifest.1048fe2ecc1d3a0bba5bf7ef69242d17.js",
+    "service-worker.js": "/drawing-app/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/drawing-app/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.d65a8d7f.chunk.js.LICENSE.txt": "/drawing-app/static/js/2.d65a8d7f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bdeb09b3.js",
+    "static/js/2.d65a8d7f.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.5d8b29bd.chunk.js"
+  ]
+}
