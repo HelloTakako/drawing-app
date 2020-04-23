@@ -3,3 +3,6 @@
 export * from './NotFoundPage';
 export * from './HomePage';
 export * from './AboutPage';
+export * from './RoomPage';
+export * from './SigninPage';
+export * from './SettingsPage';
