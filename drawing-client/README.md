@@ -9,4 +9,4 @@ npm run deploy
 ```
 
 ### Libraries
-[styled components](https://styled-components.com/)
+[React Bootstrap](https://react-bootstrap.github.io/)

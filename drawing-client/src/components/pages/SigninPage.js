@@ -1,25 +1,15 @@
 import React from 'react';
 import { useEffect } from 'react';
 
-import styled from 'styled-components';
-
 
 function SigninPage (props) {
   useEffect(() => {
     document.title = `Sign In / Sign Up`;
   });
 
-const Main = styled.main`
-  padding: 0 20px;
-  display: flex;
-`;
-const Div = styled.div`
-  padding: 20px;
-`;
-
   return (
-    <Main>
-        <Div>
+    <main>
+        <div>
             <h2>Sign In</h2>
 
             <form action="" method="POST" id="signinForm">
@@ -29,9 +19,9 @@ const Div = styled.div`
                 <input type="password" id="signPassword" name="signPassword" /><br />
                 <input type="submit" value="Sign In" />
             </form>
-        </Div>
+        </div>
 
-        <Div>
+        <div>
             <h2>Sign Up</h2>
 
             <form action="" method="POST" id="signupForm">
@@ -45,8 +35,8 @@ const Div = styled.div`
                 <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" /><br />
                 <input type="submit" value="Sign Up" />
             </form>
-        </Div>
-    </Main>
+        </div>
+    </main>
   );
 }
 

@@ -1,59 +1,28 @@
 import React from 'react';
 import { useEffect } from 'react';
 
-import styled from 'styled-components';
-
 function HomePage (props) {
   useEffect(() => {
-    document.title = `Home - Eduardo Muramoto`;
+    document.title = `Home`;
   });
-
-  const Main = styled.main`
-    padding: 0 20px;
-  `;
-
-  const HomeWrapper = styled.div`
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-  `;
-
-  const HomeDiv = styled.div`
-    width: 48%;
-  `
-
-  const UserProfImg = styled.div`
-    width: 150px;
-    height: 150px;
-    background-color: grey;
-    border-radius: 50%;
-  `;
-
-  const HomeButton = styled.button`
-    padding: 20px;
-    border: 1px solid;
-    border-radius: 10px;
-    width: 100%;
-    margin-bottom: 10px;
-  `;
 
 
   return (
-    <Main className='HomePage'>
+    <main className='HomePage'>
       <h2>Home Page</h2>
-      <HomeWrapper>
-        <HomeDiv>
+      <div>
+        <div>
           <h3>User Name</h3>
-          <UserProfImg>User profile image</UserProfImg>
+          <p>User profile image</p>
           <div>Friends: 0</div>
-        </HomeDiv>
-        <HomeDiv>
-          <HomeButton>Create a Room</HomeButton>
-          <HomeButton>Join a Room</HomeButton>
-          <HomeButton>Search Friends</HomeButton>
-        </HomeDiv>
-      </HomeWrapper>
-    </Main>
+        </div>
+        <div>
+          <button>Create a Room</button>
+          <button>Join a Room</button>
+          <button>Search Friends</button>
+        </div>
+      </div>
+    </main>
   );
 }
 

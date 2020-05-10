@@ -1,25 +1,24 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import styled from 'styled-components';
-
-
-const Nav = styled.nav`
-  padding: 10px;
-  display: flex;
-`;
-const StyledLink = styled(Link)`
-  margin-right: 20px;
-`;
+import { Nav, NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 function NavBar (props) {
   return (
-    <Nav>
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/signin">Sign In</StyledLink>
-      <StyledLink to="/settings">Settings</StyledLink>
-      <StyledLink to="/about">About</StyledLink>
-      <StyledLink to="/room">Room(temporary shown on nav)</StyledLink>
+    <Nav variant="pills">
+      <LinkContainer to="/signin">
+        <NavItem>Sign In</NavItem>
+      </LinkContainer>
+      <LinkContainer to="/settings">
+        <NavItem>Settings</NavItem>
+      </LinkContainer>
+      <LinkContainer to="/about">
+        <NavItem>About</NavItem>
+      </LinkContainer>
+      <LinkContainer to="/room">
+        <NavItem>Room</NavItem>
+      </LinkContainer>
     </Nav>
   );
 }
