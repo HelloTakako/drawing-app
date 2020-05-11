@@ -1,25 +1,32 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import { Nav, NavItem } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+
 
 function NavBar (props) {
+  const [value, setValue] = React.useState(4);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  
   return (
-    <Nav variant="pills">
-      <LinkContainer to="/signin">
-        <NavItem>Sign In</NavItem>
-      </LinkContainer>
-      <LinkContainer to="/settings">
-        <NavItem>Settings</NavItem>
-      </LinkContainer>
-      <LinkContainer to="/about">
-        <NavItem>About</NavItem>
-      </LinkContainer>
-      <LinkContainer to="/room">
-        <NavItem>Room</NavItem>
-      </LinkContainer>
-    </Nav>
+    <Paper square>
+      <Tabs
+        value={value}
+        indicatorColor="primary"
+        textColor="primary"
+        onChange={handleChange}
+      >
+        <Tab component={Link} to="/room" label="Room" />
+        <Tab component={Link} to="/settings" label="Settings" />
+        <Tab component={Link} to="/about" label="About" />
+        <Tab component={Link} to="/signin" label="SignIn" />
+      </Tabs>
+    </Paper>
   );
 }
 
