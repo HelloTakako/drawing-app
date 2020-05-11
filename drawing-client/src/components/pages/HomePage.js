@@ -1,6 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 
+import Grid from '@material-ui/core/Container';
+
 function HomePage (props) {
   useEffect(() => {
     document.title = `Home`;
@@ -8,7 +10,12 @@ function HomePage (props) {
 
 
   return (
-    <main className='HomePage'>
+    <Grid
+      container
+      direction="row"
+      justify="flex-start"
+      alignItems="flex-start"
+    >
       <h2>Home Page</h2>
       <div>
         <div>
@@ -22,7 +29,7 @@ function HomePage (props) {
           <button>Search Friends</button>
         </div>
       </div>
-    </main>
+    </Grid>
   );
 }
 

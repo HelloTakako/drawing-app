@@ -1,6 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 
+import Grid from '@material-ui/core/Container';
+
 
 function SigninPage (props) {
   useEffect(() => {
@@ -8,7 +10,12 @@ function SigninPage (props) {
   });
 
   return (
-    <main>
+    <Grid
+      container
+      direction="row"
+      justify="flex-start"
+      alignItems="flex-start"
+    >
         <div>
             <h2>Sign In</h2>
 
@@ -36,7 +43,7 @@ function SigninPage (props) {
                 <input type="submit" value="Sign Up" />
             </form>
         </div>
-    </main>
+    </Grid>
   );
 }
 

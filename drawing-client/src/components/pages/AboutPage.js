@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 
-import { Container } from 'react-bootstrap';
+import Grid from '@material-ui/core/Container';
 
 function AboutPage (props) {
   useEffect(() => {
@@ -10,9 +10,14 @@ function AboutPage (props) {
 
 
   return (
-    <Container>
+    <Grid
+      container
+      direction="row"
+      justify="flex-start"
+      alignItems="flex-start"
+    >
       <h2>About Page</h2>
-    </Container>
+    </Grid>
   );
 }
 
