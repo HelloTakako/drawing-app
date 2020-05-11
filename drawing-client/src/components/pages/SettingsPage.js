@@ -1,6 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 
+import Grid from '@material-ui/core/Container';
+
 function SettingsPage (props) {
   useEffect(() => {
     document.title = `Account Settings`;
@@ -8,9 +10,11 @@ function SettingsPage (props) {
 
 
   return (
-    <main
-      className='SettingsPage'
-      style={{padding: '0 20px'}}
+    <Grid
+      container
+      direction="row"
+      justify="flex-start"
+      alignItems="flex-start"
     >
       <h2>Account Settings</h2>
 
@@ -33,7 +37,7 @@ function SettingsPage (props) {
 
       <h4>Delete Account</h4>
 
-    </main>
+    </Grid>
   );
 }
 

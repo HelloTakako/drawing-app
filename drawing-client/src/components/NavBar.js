@@ -1,26 +1,32 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import styled from 'styled-components';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
-
-const Nav = styled.nav`
-  padding: 10px;
-  display: flex;
-`;
-const StyledLink = styled(Link)`
-  margin-right: 20px;
-`;
 
 function NavBar (props) {
+  const [value, setValue] = React.useState(4);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  
   return (
-    <Nav>
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/signin">Sign In</StyledLink>
-      <StyledLink to="/settings">Settings</StyledLink>
-      <StyledLink to="/about">About</StyledLink>
-      <StyledLink to="/room">Room(temporary shown on nav)</StyledLink>
-    </Nav>
+    <Paper square>
+      <Tabs
+        value={value}
+        indicatorColor="primary"
+        textColor="primary"
+        onChange={handleChange}
+      >
+        <Tab component={Link} to="/room" label="Room" />
+        <Tab component={Link} to="/settings" label="Settings" />
+        <Tab component={Link} to="/about" label="About" />
+        <Tab component={Link} to="/signin" label="SignIn" />
+      </Tabs>
+    </Paper>
   );
 }
 
