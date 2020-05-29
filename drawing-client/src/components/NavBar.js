@@ -20,6 +20,7 @@ function NavBar (props) {
         indicatorColor="primary"
         textColor="primary"
         onChange={handleChange}
+        centered
       >
         <Tab component={Link} to="/room" label="Room" />
         <Tab component={Link} to="/settings" label="Settings" />
