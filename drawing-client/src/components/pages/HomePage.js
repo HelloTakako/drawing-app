@@ -1,10 +1,12 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Grid';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+
+import CreateRoomModal from '../CreateRoomModal'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,6 +25,17 @@ function HomePage (props) {
     document.title = `Home`;
   });
 
+  // "Create a Room" modal window
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   const classes = useStyles();
 
   return (
@@ -40,9 +53,7 @@ function HomePage (props) {
             <div>Friends: 0</div>
           </Grid>
           <Grid item xs={6}>
-            <Button variant="outlined" color="primary">
-              Create a Room
-            </Button>
+            <CreateRoomModal />
             <Button variant="outlined" color="primary">
               Join a Room
             </Button>
