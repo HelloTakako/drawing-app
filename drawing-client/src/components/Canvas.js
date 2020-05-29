@@ -1,6 +1,21 @@
 import React, { Fragment, useEffect } from 'react';
 
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}));
+
 function Canvas (props) {
+  const classes = useStyles();
+
   useEffect(() => {
       const canvas = document.getElementById('canvas');
       const ctx = canvas.getContext('2d');
@@ -35,12 +50,11 @@ function Canvas (props) {
   });
 
   return (
-    <Fragment>
-        <canvas width="300" height="300" style={{border:'1px solid black'}} id="canvas">
-        </canvas>
+      <Fragment>
+        <canvas width="300" height="300" style={{border:'1px solid black'}} id="canvas"></canvas>
         <input type="color" id="strokeColor" />
         <input type="range" min="1" max="20" id="strokeWidth" />
-    </Fragment>
+      </Fragment>
   );
 }
 
